@@ -1,4 +1,4 @@
-# Finance Manager API
+# BaseApp Backend API
 
 A Django-based REST API witth custom user authentication.
 
