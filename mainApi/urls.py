@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework_simplejwt.views import TokenRefreshView
+from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
 from auth.views import EmailTokenObtainPairView, UserRegistrationView
 from users.urls import urlpatterns as user_urls
@@ -26,6 +27,10 @@ api_urlpatterns = [
     path('auth/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('auth/register/', UserRegistrationView.as_view(), name='user_registration'),
     path('', include(user_urls), name='user'),
+    path("schema/", SpectacularAPIView.as_view(), name="schema"),
+    path(
+        "docs/", SpectacularSwaggerView.as_view(url_name="api:schema"), name="docs"
+    ),
 ]
 
 urlpatterns = [

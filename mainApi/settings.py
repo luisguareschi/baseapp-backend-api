@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'rest_framework_simplejwt',
+    'drf_spectacular',
     "users.apps.UsersConfig"
 ]
 
@@ -136,6 +137,7 @@ REST_FRAMEWORK = {
         # 'rest_framework_simplejwt.authentication.JWTAuthentication',
         'auth.auth_with_email.EmailJWTAuthentication',
     ),
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
 
 SIMPLE_JWT = {
@@ -159,5 +161,13 @@ SIMPLE_JWT = {
 AUTH_USER_MODEL = 'users.User'
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+SPECTACULAR_SETTINGS = {
+ 'TITLE': 'BaseApp Backend API',
+ 'DESCRIPTION': 'API para el sistema de BaseApp Backend',
+ 'VERSION': '1.0.0',
+ 'SERVE_INCLUDE_SCHEMA': False,
+}
+
 
 
