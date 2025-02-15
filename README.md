@@ -27,7 +27,8 @@ This project is meant to be used together with the [baseapp-frontend](https://gi
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate
+source .venv/bin/activate # If on Linux or MacOS
+.\venv\Scripts\activate # If on Windows 
 pip install -r requirements.txt
 ```
 
