@@ -26,10 +26,10 @@ This project is meant to be used together with the [baseapp-frontend](https://gi
 2. Create a virtual enviroment and install the dependencies:
 
 ```bash
-python -m venv .venv
+python -m venv .venv # Create a virtual enviroment 
 source .venv/bin/activate # If on Linux or MacOS
 .\venv\Scripts\activate # If on Windows 
-pip install -r requirements.txt
+pip install -r requirements.txt #Install depedencies 
 ```
 
 3. Apply migrations:
