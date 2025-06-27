@@ -1,4 +1,4 @@
-name: Test Django Migrations and Run
+name: Main Workflow
 
 on:
   push:
