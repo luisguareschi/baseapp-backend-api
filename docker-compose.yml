@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  streamer-backend:
+  baseapp-backend:
     env_file:
       - .env
     build:
