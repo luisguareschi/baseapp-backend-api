@@ -5,3 +5,8 @@ __pycache__
 __pycache__/*
 .venv/*
 .venv
+.env
+media/*
+media
+staticfiles/*
+staticfiles
