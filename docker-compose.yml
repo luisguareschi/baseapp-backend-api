@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  streamer-backend:
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+      - DEBUG=False
+    volumes:
+      - .:/app
+      - /app/staticfiles
+    restart: unless-stopped
